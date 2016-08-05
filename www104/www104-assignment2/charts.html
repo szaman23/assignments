@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Charts</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="css/stylesheet.css">
+    
+    <script src="https://use.fontawesome.com/795c197889.js"></script>
+
+</head>
+<body>
+     
+   <header>
+      
+       <nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <h1 id="top">Control Panel</h1>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav navbar-right navbar-custom">
+         <li><a href="index.html"><i class="fa fa-table" aria-hidden="true"></i> Tables</a></li>
+        <li><a href="charts.html"><i class="fa fa-line-chart" aria-hidden="true"></i> Charts</a></li>
+          <li><a href="maps.html"><i class="fa fa-map-marker" aria-hidden="true"></i> Maps</a></li>
+      </ul>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
+   </header>
+   
+   <h2>Charts</h2>
+    <ul class="nav nav-tabs nav-justified nav-custom">
+      <li role="presentation" class="active"><a href="#chart1"><i class="fa fa-line-chart" aria-hidden="true"></i> Device Statistics</a></li>
+      <li role="presentation"><a href="#chart2"><i class="fa fa-pie-chart" aria-hidden="true"></i> Visitor Stats</a></li>
+      <li role="presentation"><a href="#chart3"><i class="fa fa-pie-chart" aria-hidden="true"></i> Browser Stats</a></li>
+      <li role="presentation"><a href="#chart4"><i class="fa fa-bar-chart" aria-hidden="true"></i> Site Hits</a></li>
+</ul>
+    
+ 
+   <div class="container">
+
+       <h3>Mobile vs Desktop Traffic</h3>
+       <div class="row">
+          <div class= "col-sm-12">
+            <canvas id="chart1"></canvas> 
+           </div>
+       </div>
+        <div class="row">
+          <div class= "col-sm-6">
+              <h3>Visitor Stats</h3>
+               <canvas id="chart2"></canvas>   
+            </div>
+            
+             <div class= "col-sm-6">
+                 <h3>Browsers</h3>
+                <canvas id="chart3"></canvas> 
+            </div>
+       </div>
+       
+       <div class="row">
+          <div class= "col-sm-12">
+           <h3>Site Hits</h3>
+            <canvas id="chart4" width="1000" height="350"></canvas> 
+           </div>
+       </div>
+   </div>
+    
+       
+  <div class="container-fluid">
+       <footer>
+           <a href="#top">Back to Top</a>
+        <p><small>Copyright &copy; 2016 Web Control Panel</small></p>
+      </footer>
+  </div>  
+
+   
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.1.6/Chart.bundle.js"></script>
+    <script src="https://use.fontawesome.com/795c197889.js"></script>
+    <script>
+        window.onload=function(){
+            
+            var chart1 = document.getElementById('chart1');
+            var chart2 = document.getElementById('chart2');
+            var chart3 = document.getElementById('chart3');
+            var chart4 = document.getElementById('chart4');
+            
+            var chart1_ctx = chart1.getContext('2d');
+            var chart2_ctx = chart2.getContext('2d');
+            var chart3_ctx = chart3.getContext('2d');
+            var chart4_ctx = chart4.getContext('2d');
+           
+         
+            var line_data = {
+    labels: ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"],
+    datasets: [
+        
+        {
+            label: "Mobile users",
+            fill: true,
+            lineTension: 0.1,
+            backgroundColor: "#FFE0E6",
+            borderWidth:'15px',
+            borderColor: "darkgrey",
+            pointBorderColor: "black",
+            pointBackgroundColor: "black",
+            pointBorderWidth: 1,
+            pointHoverRadius: 4,
+            pointHoverBackgroundColor: "#E7F3FB",
+            pointHoverBorderColor: "#088DD0",
+            pointHoverBorderWidth: 2,
+            pointRadius: 1,
+            pointHitRadius: 10,
+            data: [200, 300, 400, 500, 250, 700, 900, 250, 1000, 500, 700, 900],
+        },
+       
+        {
+            label: "Desktop users",
+            fill: true,
+            lineTension: 0.1,
+            backgroundColor: "#E7F3FB",
+            borderWidth:'15px',
+            borderColor: "#088DD0",
+            pointBorderColor: "#088DD0",
+            pointBackgroundColor: "#088DD0",
+            pointBorderWidth: 1,
+            pointHoverRadius: 4,
+            pointHoverBackgroundColor: "#E7F3FB",
+            pointHoverBorderColor: "#088DD0",
+            pointHoverBorderWidth: 2,
+            pointRadius: 1,
+            pointHitRadius: 10,
+            data: [500, 900, 700, 1500, 850, 1000, 1700, 2560, 2000, 1500, 1700, 945],
+        },
+        
+    ]
+                         
+};
+          
+             var pie_data = {
+    labels: [
+        "New visitors",
+        "Returning visitors"
+    ],
+     datasets: [
+        {
+            data: [65,35],
+            backgroundColor: [
+                "#009DDF",
+                "#83B84B"
+            ],
+            hoverBackgroundColor: [
+                "blue",
+                "green"
+            ]
+        }]
+};    
+    
+            
+            var doughnut_data = {
+    labels: [
+        "Chrome",
+        "Firefox",
+        "Internet Explorer",
+        "Safari"
+    ],
+    datasets: [
+        {
+            data: [71.4, 16.9, 5.7, 3.6],
+            backgroundColor: [
+                "#FF6384",
+                "#36A2EB",
+                "#FFCE56",
+                "green"
+            ]
+        }]
+};    
+    
+            var bar_data = {
+    labels: ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"],
+    datasets: [
+        {
+            label: "Number of monthly users",
+            backgroundColor: "#E7F3FB",
+            borderWidth:2,
+            borderColor: "#088DD0",
+            hoverBackgroundColor: "#E7F3FB",
+            hoverBorderColor: "#088DD0",
+            data: [600, 900, 700, 1500, 850, 1000, 1700, 2560, 2000, 1500, 1700, 945],
+        }
+    ]
+};
+      
+      
+        
+            var options={
+                responsiveAnimationDuration:500
+            };
+            
+           var line_chart = new Chart(chart1_ctx, {
+                type: 'line',
+                data:line_data,
+                options: options
+            });
+            
+           
+            
+            var myPieChart = new Chart(chart2_ctx,{
+                type: 'pie',
+                data: pie_data,
+                options: options
+            });
+            
+            
+            var myDoughnutChart = new Chart(chart3_ctx, {
+                type: 'doughnut',
+                data: doughnut_data,
+                options: options
+            });
+            
+             var myBarChart = new Chart(chart4_ctx, {
+                type: 'bar',
+                data: bar_data,
+                options: options
+            });
+            
+                  
+        }
+    </script>
+    
+</body>
+</html>

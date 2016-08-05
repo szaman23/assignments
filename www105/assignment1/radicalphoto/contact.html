@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+	<title>RadicalPhoto Contact</title>
+	<link href='http://fonts.googleapis.com/css?family=Gruppo' rel='stylesheet' type='text/css'>
+	<link type="text/css" rel="stylesheet" href="css/radicalphoto.css">
+</head>
+<body>
+
+<div id="header">
+	<ul>
+		<li><a href="index.html">Home</a></li>
+		<li><a href="gallery.html">Gallery</a></li>
+		<li><a href="about.html">About</a></li>
+		<li><a href="contact.html">Contact</a>
+	</ul>
+
+	<h1>RadicalPhoto</h1>
+
+</div>
+
+<div id="main_wrapper">
+
+	<div id="content">
+	<h2>Contact RadicalPhoto</h2>
+
+	<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam id dolor id nibh ultricies vehicula ut id elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.</p>
+
+	<form action="http://derekallard.com/echo.php" method="post" id="myform">
+
+		<p class="errors">All fields are required.</p>
+
+		<p><label>Name: <input type="text" size="25" name="name" id="username"></label><span id="name_error"></span></p>
+		<p><label>Email: <input type="text" size="25" name="email" id="email"></label><span id="email_error"></span></p>
+		<p><label>Message:<br> <textarea cols="50" rows="5" name="message" id="my_message"></textarea></label><span id="message_error"></span></p>
+		<p><input type="submit" value="Contact Us"></p>
+	</form>
+
+	</div>
+
+	<div id="footer">
+	<p>All content &copy; Copyright</p>
+	</div>
+
+</div>
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+<script>
+    window.onload = function(){
+        
+        var form = document.getElementById('myform');
+        
+        var name = document.getElementById('username');
+        var email = document.getElementById('email');
+        var message = document.getElementById('my_message');
+        
+        var name_error = document.getElementById('name_error');
+        var email_error = document.getElementById('email_error');
+        var message_error = document.getElementById('message_error');
+
+        
+        name.onkeypress = function(){
+                name_error.innerHTML = "";
+
+        }
+        
+         email.onkeypress = function(){
+            email_error.innerHTML = "";
+    
+        }
+         
+         
+          message.onkeypress = function(){
+            message_error.innerHTML = "";
+    
+        }
+        
+        
+        form.onsubmit = function(){
+            
+             var errors = 0;
+           
+            if (name.value == ""){
+                errors++;
+                name_error.innerHTML = " All fields are required";
+               
+            
+        } else{
+                name_error.innerHTML = "";
+                
+             }
+            
+            
+            
+             if (email.value == ""){
+                errors++;
+                email_error.innerHTML = " All fields are required";
+                
+            
+        } else{
+                email_error.innerHTML = " ";
+               
+             }
+            
+            
+             if (message.value == ""){
+                errors++;
+                message_error.innerHTML = " All fields are required";
+                
+            
+        } else{
+                message_error.innerHTML = "";
+             }
+        
+            
+            if (errors>0){
+                return false;
+            }
+        
+  }
+        
+    }
+</script>
+
+
+</body>
+</html>

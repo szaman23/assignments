@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+	<title>RadicalPhoto Gallery</title>
+	<link href='http://fonts.googleapis.com/css?family=Gruppo' rel='stylesheet'>
+	<link type="text/css" rel="stylesheet" href="css/radicalphoto.css">
+</head>
+<body>
+
+<div id="header">
+	<ul>
+		<li><a href="index.html">Home</a></li>
+		<li><a href="gallery.html">Gallery</a></li>
+		<li><a href="about.html">About</a></li>
+		<li><a href="contact.html">Contact</a>
+	</ul>
+
+	<h1>RadicalPhoto</h1>
+
+</div>
+
+<div id="main_wrapper">
+
+	<div id="content">
+	<h2>Gallery</h2>
+
+	<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam id dolor id nibh ultricies vehicula ut id elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.</p>
+
+	<div id="gallery">
+		<ul>
+			<li><a href="images/blue_dress.jpg"><img id="dress" src="images/blue_dress_thumb.jpg" alt="girl"></a></li>
+			<li><a href="images/boxer.jpg"><img id="boxer" src="images/boxer_thumb.jpg" alt="boxer"></a></li>
+			<li><a href="images/cow.jpg"><img id="cow" src="images/cow_thumb.jpg" alt="cow"></a></li>
+			<li><a href="images/country_boy_relaxing.jpg"><img id="boy" src="images/country_boy_relaxing_thumb.jpg" alt="boy"></a></li>
+			<li><a href="images/eye.jpg"><img id="eye" src="images/eye_thumb.jpg" alt="eye"></a></li>
+			<li><a href="images/ice_swim.jpg"><img id="ice" src="images/ice_swim_thumb.jpg" alt="ice-swimming"></a></li>
+			<li><a href="images/sitting.jpg"><img id="sit" src="images/sitting_thumb.jpg" alt="boy-sitting"></a></li>
+		</ul>
+
+		<p><img id="big_img" src="images/blue_dress.jpg" alt="girl-in-blue-dress"></p>
+
+	</div>
+
+	</div>
+
+	<div id="footer">
+	<p>All content &copy; Copyright</p>
+	</div>
+
+</div>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script>
+    
+    window.onload= function(){
+        
+         var big_img = document.getElementById('big_img');
+    
+        
+         var dress = document.getElementById('dress');
+         var boxer = document.getElementById('boxer');
+         var cow = document.getElementById('cow');
+         var boy = document.getElementById('boy');
+         var ice = document.getElementById('ice');
+         var sit = document.getElementById('sit');
+        
+        
+        
+         boxer.onmouseover = function(){
+           
+             big_img.src = "images/boxer.jpg";
+             
+         }
+         
+         cow.onmouseover = function(){
+           
+             big_img.src = "images/cow.jpg";
+             
+         }
+         
+  
+          boy.onmouseover = function(){
+           
+             big_img.src = "images/country_boy_relaxing.jpg";
+             
+         }
+          
+           eye.onmouseover = function(){
+           
+             big_img.src = "images/eye.jpg";
+             
+         }
+           
+            ice.onmouseover = function(){
+           
+             big_img.src = "images/ice_swim.jpg";
+             
+         }
+            
+             sit.onmouseover = function(){
+           
+             big_img.src = "images/sitting.jpg";
+             
+         }
+        
+    }
+    
+    </script>
+       
+</body>
+</html>

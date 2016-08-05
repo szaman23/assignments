@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        
+    <meta charset="UTF-8">
+	<title>RadicalPhoto About</title>
+	<link href='http://fonts.googleapis.com/css?family=Gruppo' rel='stylesheet'>
+	<link type="text/css" rel="stylesheet" href="css/radicalphoto.css">
+</head>
+<body>
+
+<div id="header">
+	<ul>
+		<li><a href="index.html">Home</a></li>
+		<li><a href="gallery.html">Gallery</a></li>
+		<li><a href="about.html">About</a></li>
+		<li><a href="contact.html">Contact</a>
+	</ul>
+
+	<h1>RadicalPhoto</h1>
+
+</div>
+
+<div id="main_wrapper">
+
+	<div id="content">
+	<h2>About RadicalPhoto</h2>
+
+	<p>Today is <span id="todayDate">July 17, 2015</span>. Stay tuned, we have exciting news about our company coming in a few more weeks!</p>
+
+	<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam id dolor id nibh ultricies vehicula ut id elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.</p>
+
+	<h3>Our Team</h3>
+
+	<p id="bios">
+		<a href="sheila.html" id="sheila">Sheila</a> (President) | 
+		<a href="frank.html" id="frank">Frank</a> (Vice President) | 
+		<a href="joanne.html" id="joanne">Joanne</a> (Senior Photographer)
+	</p> 
+
+	<div id="bio">
+	    
+	</div>
+        
+	</div>
+
+	<div id="footer">
+	<p>All content &copy; Copyright</p>
+	</div>
+
+</div>
+
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+	<script>
+ window.onload=function(){
+        
+     var full_date = new Date();  
+     var month = full_date.getMonth();
+     var date = full_date.getDate();
+     var year = full_date.getFullYear();
+     
+     var month_array = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+     
+     document.getElementById('todayDate').innerHTML = month_array[month]+ " "+ date + ", " + " " + year;
+     
+     var bio = document.getElementById('bio');
+     
+     var sheila = document.getElementById('sheila');
+     var frank = document.getElementById('frank');
+     var joanne = document.getElementById('joanne');
+     
+     sheila.onmouseover= function(){
+         bio.style.backgroundImage = "url('images/bio1.jpg')";
+         bio.style.backgroundRepeat = "no-repeat";
+         bio.style.marginLeft = "0px";
+     }
+     
+     frank.onmouseover= function(){
+         bio.style.backgroundImage = "url('images/bio3.jpg')";
+         bio.style.backgroundRepeat = "no-repeat";
+         bio.style.marginLeft = "150px";
+     }
+     
+     
+     joanne.onmouseover= function(){
+         bio.style.backgroundImage = "url('images/bio2.jpg')";
+         bio.style.backgroundRepeat = "no-repeat";
+         bio.style.marginLeft = "300px";
+     }
+    
+  
+    }
+   
+</script>
+
+</body>
+</html>

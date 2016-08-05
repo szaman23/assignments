@@ -1,0 +1,287 @@
+body{
+    font-family: 'quicksandregular';
+	margin:0;
+	
+
+}
+@font-face {
+    font-family: 'quicksandregular';
+    src: url('../fonts/uicksand-regular-webfont.eot');
+    src: url('../fonts/quicksand-regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/quicksand-regular-webfont.woff2') format('woff2'),
+         url('../fonts/quicksand-regular-webfont.woff') format('woff'),
+         url('../fonts/quicksand-regular-webfont.ttf') format('truetype'),
+         url('../fonts/quicksand-regular-webfont.svg#quicksandregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+.header{
+	background-color: #D2A98B;
+	color:black;
+	padding:20px;
+	text-align:center;
+	border:10px solid white;
+	
+}
+
+nav ul{
+	list-style:none;
+	
+}
+
+nav ul li{
+	display:inline-block;
+	
+}
+
+nav ul li a{
+	text-decoration:none;
+	color:black;
+	padding:10px;
+	font-weight:bold;
+}
+
+
+main{
+	display:block;
+	margin:auto;
+	margin-bottom:20px;
+}
+
+
+
+img{
+	max-width:100%;
+	height:auto;
+	
+}
+
+
+#color{
+	text-align:center;
+	color: black;
+	padding:20px;
+	position:absolute;
+	top:200px;
+	left:10px;
+	background-color: #D2A98B;
+	border:1px solid black;
+	border-radius:25px;
+	
+}
+
+.container{
+	
+}
+
+aside{
+	float:left;
+	box-sizing:border-box;
+	display:inline-block;
+	max-width:30%;
+	margin-left:10px;
+	background: #EAD9E3;
+	padding:30px;
+	border:2px solid black;
+	
+
+}
+
+.styling{
+	float:right;
+	box-sizing:border-box;
+	display:inline-block;
+	max-width:67%;
+	background: #EAD9E3;
+	padding:10px;
+	margin-right:10px;
+	border:1px solid #D2A98B;
+	
+
+}
+
+#image{
+	float:left;
+	border:1px solid black;
+	padding:10px;
+	margin-left:200px;
+	margin-right:200px;
+}
+
+
+/*---step 2---*/
+
+#one{
+	 background: #ffe6cc;
+	 color:brown;
+	 font-size: 2em;
+	 padding:10px;
+	 transition:1s;
+}
+
+#one:hover{
+	padding:20px;
+}
+
+#two{
+	font-size: 1.5em;
+	background:white;
+	padding:10px;
+	 transition:1s;
+}
+
+#two:hover{
+	-webkit-transform: rotate(5deg); /*CSS validator shows warnings for webkit transform. I'm ok with this*/
+	-ms-transform: rotate(5deg);
+	transform:rotate(5deg);
+}
+
+#three{
+	 font-size: 1.17em;
+	background: skyblue;
+	color:midnightblue;
+	padding:10px;
+	transition:1s;
+}
+
+#three:hover{
+	background:white;
+	color:red;
+	font-weight:bold;
+}
+
+/*---step 3---*/
+
+
+#red{
+	float:left;
+	width:100px;
+	height:100px;
+	background:blue;
+	color:red;
+	border:1px solid black;
+	padding:10px;
+	margin-left:200px;
+	transition:1s;
+
+}
+
+#red:hover{
+	font-size:20px;
+}
+
+#black{
+	float:left;
+	width:100px;
+	height:100px;
+	background:white;
+	color:black;
+	border:1px solid black;	
+	padding:10px;
+	margin-left:200px;
+	transition:1s;
+}
+
+#black:hover{
+	padding:20px;
+}
+
+/*---step 4---*/
+
+.lists{
+	list-style:none;
+	padding:10px;
+	text-align:center;
+}
+
+.listitem{
+	display:inline-block;
+	padding:15px;
+	margin-right:10px;
+	color:white;
+	background:#740B72;
+	border-radius:10px;
+	box-shadow: 5px 5px 2px midnightblue;
+	
+}
+
+/*---step 5---*/
+
+table{
+	margin:auto;
+	padding:10px;
+	border-collapse: collapse;
+}
+
+caption{
+	padding:10px;
+	color: blue;
+	text-transform:uppercase;
+}
+
+th, td{
+	border:1px solid black;
+	padding:10px;
+}
+
+th{
+	color:white;
+	background:midnightblue;
+}
+
+tr:nth-child(even)
+{
+	color:blue;
+	background:#ccddff;
+}
+
+tr:nth-child(odd)
+{
+	color:white;
+	background:slategrey;
+}
+
+.clearfoot{
+	clear:both;
+}
+
+/*---step 6---*/
+
+form{
+	width:300px;
+	margin:auto;
+	padding:10px;
+	border:1px solid grey;
+	background: #CAE0D4;
+	box-shadow: 5px 5px 2px midnightblue;
+}
+
+label{
+	padding:10px;
+	display:inline-block;
+	text-align:right;
+	width:100px;
+	color:midnightblue;
+	font-weight:bold;
+}
+
+input:focus{
+	border-color:black;
+}
+
+button{
+	margin-left:150px;
+	
+}
+
+footer{
+	background-color: #D2A98B;
+	color:black;
+	padding:20px;
+	text-align:center;
+	border:10px solid white;
+	
+}
+

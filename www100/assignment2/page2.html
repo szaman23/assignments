@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+
+<head>
+	<meta charset="UTF-8">
+	<title>Website Accessibility Tutorial</title>
+	<link href="css/stylesheet2.css" rel="stylesheet" type="text/css">
+	
+</head>
+
+<body>
+	
+	
+	<header class="header">
+		<h1 id="Top">Website Accessibility Tutorial</h1>
+		<nav>
+			<ul>
+			<li><a href="page1.html">PAGE 1</a> |</li>
+			<li><a href="page2.html">PAGE 2</a></li>
+			</ul>
+		</nav>	
+	</header>
+	
+<div class="container">
+	
+	<main>
+		<img src="images/image2.jpg" width="1500" height="500" alt="web-design" title="web-design">
+		<h2 id="color">Want to learn how to create accessible websites? Then this beginner's tutorial is for you!</h2>
+	</main>
+	
+		<aside>
+			<h3>Why make accessible websites?</h3>
+				<p>A developer needs to ensure that users with disabilities (such as color blindness) can easily view and interact with websites.</p>
+				<p>Some of the disabilities which need to be taken into account when designing a website are:</p>
+					<ol>
+						<li>Poor vision-such as color blindness</li>
+						<li>Seizures- usually caused by flashing lights</li>
+						<li>Hearing problems</li>
+						<li>Mobility issues-difficulties with fine motor skills e.g. using a keyboard</li>
+					</ol>	
+					
+				<p>Making websites accessible not only makes it easy for disabled users, it also increases the overall quality of a website.
+				This tutorial will give you some tips on how to make an accessible website.</p>
+				
+		</aside>
+		
+		<article class="styling">
+			<h3>Tip 1: Text alternatives for images</h3>
+			<p>To make a website accessible, you should use text alternatives for images. If an image cannot be displayed on a browser or if a user is disabled, then a screen reader will read the alt text instead.
+			This will provide users with some idea of what the image is about. So the alt text must describe the image used in the website.
+				The first image doesn't exist, but since we used an "alt" tag, we can see the description of the image.</p>
+			<img src="images/image3.jpg" width="150" height="150" alt="this is an image with alt tag" title="using alt">
+			<img id="image" src="noimage.jpg" width="100" height="100" alt="This is an image with an alt tag" title="using alt">
+		</article>
+		
+		<article class="styling">
+			<h3>Tip 2: Using structural tags</h3>
+			<p>HTML has 6 tags, ranging from h1 to h6 and it is important to use them correctly. Screen readers use the heading tags to read through the content, so the tags should be organized in a specific order. Check out these examples to learn more.</p>
+			<p id="one">Use h1 for headings only. h1 should only describe the title of a page.</p>
+			<p id="two">h2 size is less than h1. This means that the importance of each tag decreases as we go down the list. </p>
+			<p id="three"> This is h3. DO NOT skip between tags (such as using h1 and then h3) the screen reader will think that something is missing in between.</p>
+		</article>
+		
+		
+		<article class="styling">
+			<h3>Tip 3: Defining high contrast</h3>
+			<p>Color blind (or color deficient) people have difficulty seeing some colors. For example, some people have red-green, or blue-yellow color blindness. This means that they will not be able to see red text on a green background, and vice versa. 
+			For this reason, it is important to use colors which color blind people can see. This can be done by using a high contrast ratio. </p>
+			<p id="red">The text can hardly be seen! Bad contrast!</p>
+			<p id="black">The text can be seen clearly. Good contrast.</p>
+		</article>
+		
+		
+		<article class="styling">
+			<h3>Tip 4: Organizing Menu links</h3>
+			<p>Users who are blind or cannot use keyboard rely on screen-readers to interact with a website. So menu links should be described clearly. 
+			Words such as "Click here!" or "Find out more!" which do not describe the menu should not be used.Below is an example of an organized menu.</p>
+				<ul class="lists">
+					<li class="listitem">Home</li>
+					<li class="listitem">About</li>
+					<li class="listitem">Contact</li>
+				</ul>
+		</article>
+		
+		<article class="styling">
+			<h3>Tip 5: All about tables</h3>
+			<p> By simply including a caption in a table, you can make your website more accessible to disabled/blind users. When the screen reader reads the caption, the user will have an idea of what the table is about.
+				You should also add headers to your table to represent columns. Screen readers read the header in a different way, so blind users will be able to know which data represents rows and columns.<br>
+				Below is an example of a table which has headers and a caption, making the data organized and accessible for screen readers.</p>
+				<table>
+					<caption>Menu</caption>
+					<tr>
+						<th>Item</th>
+						<th>Price</th>
+					</tr>
+					
+					<tr>
+						<td>Smoothie</td>
+						<td>$5.99</td>
+					</tr>
+					
+					<tr>
+						<td>Cheesecake</td>
+						<td>$9.99</td>
+					</tr>
+					
+					<tr>
+						<td>Chocolate crepe</td>
+						<td>$15.99</td>
+					</tr>
+				</table>
+			</article>
+			
+			<article class="styling">
+			<h3>Tip 5: Making forms accessible</h3>
+			<p> Make sure that all form fields are labelled clearly. Use the CSS "focus" attribute for each form field.
+			This will help visually-impaired users to fill in forms with more ease. Below is an example of an accessible form.</p>
+				<form id="NewForm" action="http://derekallard.com/echo.php" method="post">
+					<label for="name">Full Name:</label>
+					<input type="text" id="name">
+					
+					<label for="mail">Email:</label>
+					<input type="email" id="mail">
+
+					<button type="Submit">Submit</button>
+				</form>
+			</article>
+			
+			<article class="styling">
+			<h3>Some other tips</h3>
+			<p> There are many other things to keep in mind while designing an accessible website. Some of these include:</p>
+				<ol>
+					<li>Using subtitles/closed captioning for videos</li>
+					<li>Not having lights flash for longer than a specific threshold </li>
+					<li>Not using small fonts</li>
+				</ol>
+			<p>And many more! After all, there are 3 levels of conformance for accessibility- A (lowest), AA, and AAA (highest). 
+			For more information, check out the guidelines at <a href="https://www.w3.org/WAI/" target="blank">WAI</a>. </p>
+			</article>
+	</div>
+			
+<div class="clearfoot"></div>
+	
+	<footer>
+		<a href="#Top">Back to Top</a><br>
+		<small>&copy;Copyright 2016 web Tutorial</small>
+	</footer>
+	
+</body>
+
+</html>
+
+<!-- Tutorial content source: https://webaccess.berkeley.edu/resources/tips/web-accessibility http://www.afb.org/info/programs-and-services/technology-evaluation/creating-accessible-websites/tips-and-tricks/1235,
+http://webaim.org/blog/10-easy-accessibility-tips/ https://www.amherst.edu/help/make_accessible https://www.w3.org/WAI/quicktips/-->
